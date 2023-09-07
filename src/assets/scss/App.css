@@ -1,0 +1,79 @@
+.container{
+  max-width: 1170px;
+  padding: 0px 20px;
+  margin: 0 auto;
+}
+
+
+.spinner {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  animation: roll 1s ease-in-out infinite alternate;
+}
+.spinner:after{
+  content:"";
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  border: 5px solid ;
+  border-color: #C8BCA7 transparent;
+}
+@keyframes roll {
+  0% {
+    transform: translateX(-150%) rotate(0deg) ;
+  }
+  100% {
+    transform:  translateX(150%) rotate(360deg);
+  }
+}
+
+.loading-letter {
+  display: inline-block;
+  font-weight: 400;
+  position: relative;
+}
+
+.loading-letter:before{
+  content: '';
+  animation: 0.5s print linear alternate infinite;
+}
+.loading-letter:after{
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translatey(-45%);
+  width: 2px;
+  height: 1.3em;
+  background: currentColor;
+  opacity: 0.8;
+  animation: 0.3s blink steps(2) infinite;
+}
+
+@keyframes blink {
+  0%  { visibility: hidden;}
+  100%  { visibility: visible;}
+}
+@keyframes print {
+  0% { content: 'L'}
+  10% { content: 'Lo'}
+  20% { content: 'Loa'}
+  30% { content: 'Load'}
+  40% { content: 'Loadi'}
+  50% { content: 'Loadin'}
+  60% { content: 'Loading'}
+  70% { content: 'Loading.'}
+  80% { content: 'Loading..'}
+  90% , 100% { content: 'Loading...'}
+}
+
+.link-back{
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #000000c0;
+  background-color: transparent;
+}

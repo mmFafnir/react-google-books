@@ -1,0 +1,39 @@
+
+.book-list{
+    display: flex;
+    flex-wrap: wrap;
+
+    .empty{
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0 auto;
+        margin-top: 50px; 
+    }
+    .book-card{
+        flex: 0 1 22%;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+    .book-list{
+        justify-content: center;
+        .book-card {
+            flex: 0 0 40%;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .book-list{
+        justify-content: center;
+        .book-card {
+            flex: 0 1 300px;
+
+            &__img img{
+                object-position: center;
+            }
+        }
+    }
+}
